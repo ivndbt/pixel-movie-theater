@@ -1,0 +1,11 @@
+{
+    "name": "Pixel Movie Theater",
+    "short_name": "pmt",
+    "icons": [
+      { "src": "/assets/favicon/icon-192.png", "type": "image/png", "sizes": "192x192" },
+      { "src": "/assets/favicon/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    ],
+    "start_url": "/",
+    "background_color": "#110C1C",
+    "display": "standalone"
+  }

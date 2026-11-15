@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "Limelight";
+  src: local("Limelight"),
+       url(Limelight.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cambo";
+  src: local("Cambo"),
+       url(Cambo.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --scale: 1;
+  --wall-color: #5a1620;
+  --wood-color: #2b1a14;
+  --brass-color: #d2ac47;
+  --brass-light: #f7ef8a;
+  --brass-dark: #ae8625;
+  --engraving-color: #111111;
+  --background-color: #110C1C;
+  --text-color: #EFE3E3;
+  --font-heading: "Limelight", serif;
+  --font-body: "Cambo", serif;
+  --font-size: 20px;
+  --line-height: 1.2;
+}
+
+::selection {
+  background: var(--brass-color);
+  color: var(--background-color);
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+html { 
+  height: 100%; 
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  border: 2px solid var(--brass-color);
+}
+
+main { 
+  flex: 1; 
+  overflow-x: clip;
+}
+
+header {
+  padding: 1.25em 1.25em 0 1.25em;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  color: var(--brass-color);
+  margin-bottom: 0;
+  border-top: 2px solid var(--brass-color);
+  border-bottom: 2px solid var(--brass-color);
+}
+
+h2 {
+  color: var(--brass-color);
+}
+
+p, li {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  margin: 0.5em;
+}
+
+li::marker {
+  color: var(--brass-color);
+}
+
+a { 
+  color: var(--brass-color); 
+}
+
+header a {
+  text-decoration: none;
+}
+
+.welcome {
+  padding: 1.25em 1.5em;
+  text-align: center;
+}
+
+.join {
+  padding: 0 1.5em;
+}
+
+.badge {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+  display: block;
+  margin-inline: auto;
+}
+
+pre {
+  margin: 0.5em;
+  padding: 0.75em 1em;
+  overflow-x: auto;
+  border: 2px solid var(--brass-color);
+  background: var(--wood-color)
+}
+
+footer {
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+.corridor {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-top: 2px solid var(--brass-color);
+  border-bottom: 2px solid var(--brass-color);
+  scroll-behavior: auto;
+  scrollbar-color: var(--brass-color) var(--background-color);
+  scrollbar-width: thin;
+}
+
+.wall {
+  display: flex;
+  min-height: calc(220px + 150px * var(--scale));
+  gap: 0;
+  min-width: 100%;
+  width: max-content;
+  padding: calc(3em * var(--scale)) calc(3em * var(--scale)) calc(7em * var(--scale));
+  background-image: url("pixel-theater-background.png");
+  background-size: contain;
+  image-rendering: pixelated;
+  background-color: var(--wall-color); /* backup if image doesn't load */
+}
+
+.poster {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster img {
+  display: block;
+  width: calc(80px * var(--scale));
+  height: calc(120px * var(--scale));
+  image-rendering: pixelated;
+  border: 10px solid var(--wood-color);
+  background-color: var(--wood-color);
+  box-sizing: content-box;
+  box-shadow: 
+    0 -2px 0 0 var(--brass-light),   /* edge top */
+    2px 0 0 0 var(--brass-dark),    /* edge right */
+    0 2px 0 0 var(--brass-dark),     /* edge bottom */
+    -2px 0 0 0 var(--brass-light),    /* edge left */
+    2px -2px 0 0 var(--brass-light), /* corner top-right */
+    -2px 2px 0 0 var(--brass-dark),  /* corner bottom-left */
+    -2px -2px 0 0 var(--brass-light), /* corner top-left */
+    2px 2px 0 0 var(--brass-dark),  /* corner bottom-right */
+    0.2em 0.5em 1em rgba(0, 0, 0, 0.5);   /* shadow */
+}
+
+.poster figcaption {
+  margin-top: calc(1em * var(--scale));
+  padding: 0.2em 0.6em;
+  background: var(--brass-color);
+  color: var(--engraving-color);
+  font-size: 0.8em;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 
+    0 -2px 0 0 var(--brass-light),
+    2px 0 0 0 var(--brass-dark),
+    0 2px 0 0 var(--brass-dark),
+    -2px 0 0 0 var(--brass-light),
+    2px -2px 0 0 var(--brass-light),
+    -2px 2px 0 0 var(--brass-dark),
+    -2px -2px 0 0 var(--brass-light),
+    2px 2px 0 0 var(--brass-dark),
+    0.1em 0.2em 1em rgba(0, 0, 0, 0.5);
+}
+
+.poster figcaption small { 
+  display: block; 
+  font-size: 1em;
+}
+
+figcaption a {
+  text-decoration: none;
+  color: var(--engraving-color);
+}
+
+figcaption a:hover, figcaption a:focus-visible { 
+  text-decoration: underline; 
+}
+
+/* zoom checkbox */
+.zoom-btn {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--font-size);
+}
+
+.zoom-toggle { 
+  accent-color: var(--brass-color); 
+  cursor: pointer; 
+  margin-right: 0.8em; 
+}
+
+body:has(.zoom-toggle:checked) .corridor { 
+  --scale: 2; 
+}
+
+/* hr film style */
+.film-strip {
+  position: relative;
+  width: 110%;  /* wider than the page, so both ends get cropped */
+  height: 24px;
+  border: none;
+  /* middle row vertical bars 6px wide every 16px (trasparent), 24-16=8px tall and centered */
+  background: repeating-linear-gradient(to right, var(--brass-color) 0 6px, transparent 6px 16px) center / 100% calc(100% - 16px) no-repeat;
+}
+
+.film-strip::before, .film-strip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background:
+    /* top line */
+    linear-gradient(var(--brass-color), var(--brass-color)) top left / 100% 2px no-repeat,
+    /* bottom line */
+    linear-gradient(var(--brass-color), var(--brass-color)) bottom left / 100% 2px no-repeat,
+    /* dotted line 4px brass + 4px gap */
+    linear-gradient(to right, var(--brass-color) 0 4px, transparent 4px 8px) 0 center / 8px 4px repeat-x;
+}
+
+.film-strip::before { 
+  top: 0; 
+}
+
+.film-strip::after  { 
+  bottom: 0; 
+}
