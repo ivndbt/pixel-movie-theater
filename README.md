@@ -1,6 +1,6 @@
 # Pixel Movie Theater
 
-Read the poster rules on the [website](https://sitopage.com/nomerepo/#join) before you start.
+Read the poster rules on the [website](https://ivndbt.github.io/pixel-movie-theater/#join) before you start.
 
 ## Naming and formatting
 
@@ -10,8 +10,8 @@ Read the poster rules on the [website](https://sitopage.com/nomerepo/#join) befo
 ## How to submit - coding version
 
 ```sh
-git clone https://github.com/your-username/this-repo.git
-cd this-repo
+git clone https://github.com/YOUR-USERNAME/pixel-movie-theater.git
+cd pixel-movie-theater
 git switch -c add-film-title
 # add posters/film-title-username.png
 # add the <figure> block at the top of the .wall div in index.html, above the other posters
@@ -28,7 +28,7 @@ Sync your fork with the original repository before starting a new branch.
 
 ```sh
 # only the first time: add the original repository as "upstream"
-git remote add upstream https://github.com/ORIGINAL-OWNER/this-repo.git
+git remote add upstream https://github.com/ivndbt/pixel-movie-theater.git
 
 # every time
 git switch main
@@ -50,7 +50,7 @@ A fork is your own copy of the project where you can make changes safely.
 1. Click **Fork** at the top right of this page.
 2. Click **Create fork**.
 
-You are now on your copy at `github.com/your-username/...`.
+You are now on your copy at `github.com/YOUR-USERNAME/pixel-movie-theater`.
 
 ### 2. Create a branch
 
@@ -83,7 +83,7 @@ Make sure the button now says `add-film-title`. All the next steps must happen o
   <figcaption>
     Film Title
     <small>2026</small>
-    <em><a href="https://your-website.com/">username</a></em>
+    <em><a href="https://YOURWEBSITE.DOMAIN/">username</a></em>
   </figcaption>
 </figure>
 ```
@@ -93,7 +93,7 @@ Make sure the button now says `add-film-title`. All the next steps must happen o
    - `src`: the exact name of the file you uploaded.
    - `Film Title`: the movie title.
    - `2026`: the release year.
-   - `https://your-website.com/`: your website.
+   - `https://YOURWEBSITE.DOMAIN/`: your website.
    - `username`: the name you wnat shown on the plate.
 6. Click **Commit changes...** (top right), write a message like `Add Film Title to the corridor`, select **Commit directly to the add-film-title branch** and confirm.
 
