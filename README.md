@@ -1,11 +1,12 @@
 # Pixel Movie Theater
 
-Read the poster rules on the [website](https://ivndbt.github.io/pixel-movie-theater/#join) before you start.
+Check out the project origin story from my [blogpost](https://ivndbt.com/makes/pixel-movie-theater/pixel-movie-theater).
 
 ## Naming and formatting
 
 - Name your file like this: `film-title-username.png` or `.gif` (lowercase, words separated by hyphens, no spaces).
 - Keep the same indentation as the other poster blocks in `index.html`.
+- Read other rules on the [join the clique section](https://ivndbt.github.io/pixel-movie-theater/#join) before you start.
 
 ## How to submit - coding version
 
